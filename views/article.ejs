@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p>
+    <img src="<%= articleinfo.author_src %>" alt="">
+    作者：<%= articleinfo.author %>
+</p>
+<div>
+    <p>
+        <%= articleinfo.title %>
+    </p>
+    <p>
+        <%= articleinfo.newDate %>
+        <a href="/article?id=<%=id%>&act=like">
+            点赞
+            <%= articleinfo.n_link %>
+
+        </a>
+    </p>
+    <p>
+        <%= articleinfo.content %>
+    </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+.swiper-container{
+    height: 18rem;
+}
+.swiper-slide{
+    position: relative;
+}
+.bannerImage{
+    width: 100%;
+    height: 100%;
+}
+.sub_title,.title{
+    position: absolute;
+}
+.sub_title{
+    bottom: 1rem;
+    font-size: 1rem;
+    color: firebrick;
+}
+.title{
+    bottom: 3rem;
+    font-size: 1.5rem;
+    color: red;
+}
+.article .articleTitle{
+    line-height: 3.2rem;
+    font-size: 1.7rem;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}

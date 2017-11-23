@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <%for(var i=0;i<banners.length;i++){%>
+        <div class="swiper-slide">
+            <img class="bannerImage" src="<%=banners[i].src%>" alt="">
+            <p class="title"><%=banners[i].title%></p>
+            <p class="sub_title"><%=banners[i].sub_title%></p>
+        </div>
+        <%}%>
+
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<div class="article">
+    <ul>
+        <%for(var i=0;i<article.length;i++){%>
+        <li>
+            <a href="article?id=<%=article[i].ID%>">
+                <h2 class="articleTitle"><%=article[i].title%></h2>
+                <p class="articleSummary"><%=article[i].summary%></p>
+            </a>
+        </li>
+
+        <%}%>
+    </ul>
+
+</div>
+</body>
+<script src="./js/jquery-3.2.1.js"></script>
+
+<script src="./js/swiper.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: false,//可选选项，自动滑动
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        loop : true,
+
+    })
+</script>
+</html>
